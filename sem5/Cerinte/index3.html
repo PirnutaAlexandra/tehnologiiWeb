@@ -1,0 +1,34 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <div>
+        <form>
+            <input id="inputName" type="text">
+            <br /> <br />
+            <input id="inputAge" type="number"> <br /> <br />
+            <input value="submit" onclick="sendData()" type="button"> <br /><br />
+        </form>
+    </div>
+    <div id="tableData">
+
+   </div>
+
+  <div id="tableData"></div>
+
+  <h2>Caută persoană după ID</h2>
+  <form onsubmit="getById(event)">
+    <input type="number" id="inputId" placeholder="ID">
+    <button type="submit">Caută</button>
+  </form>
+
+  <div id="result"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="index3.js"></script>
+
+</html>

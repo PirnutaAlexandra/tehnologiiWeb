@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Eveniment personalizat</title>
+  <script>
+    window.onload = () => {
+      const button = document.getElementById("myBtn");
+       const text = document.getElementById("text");
+
+      const clickHandler = () => {
+        const myEvent = new Event("myEvt");
+        document.dispatchEvent(myEvent);
+      };
+
+      const myEvtHandler = () => {
+        console.log("Butonul a fost apăsat.");
+      };
+
+       document.addEventListener("myEvt", () => {
+         text.style.color = "red"; });
+
+      button.onclick = clickHandler;
+      document.addEventListener("myEvt", myEvtHandler);
+    };
+  </script>
+</head>
+<body>
+  <button id="myBtn">Click me!</button>
+    <p id="text">Salut!</p>
+</body>
+</html>

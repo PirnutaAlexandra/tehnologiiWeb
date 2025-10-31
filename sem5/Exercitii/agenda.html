@@ -1,0 +1,37 @@
+<html lang="ro">
+<head>
+  <script>
+    window.onload = () => {
+      var form = document.getElementById('form');
+
+      form.onsubmit = (e) => {
+        e.preventDefault();
+
+        var lista = document.getElementById('agenda');
+        var nume = document.getElementById('nume').value;
+        var telefon = document.getElementById('telefon').value;
+
+        if (!nume || !telefon) return;
+
+        var element = document.createElement('li');
+        element.innerHTML = nume + ' - ' + telefon;
+
+        lista.appendChild(element);
+        form.reset();
+      };
+    };
+  </script>
+</head>
+
+<body>
+  <h1>Agenda</h1>
+  <ul id="agenda"></ul>
+
+  <h2>Adaugă contact</h2>
+  <form id="form">
+    <input type="text" id="nume" placeholder="Nume" />
+    <input type="text" id="telefon" placeholder="Telefon" />
+    <button type="submit">Adaugă</button>
+  </form>
+</body>
+</html>
