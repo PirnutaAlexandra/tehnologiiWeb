@@ -1,0 +1,27 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;   
+  margin-right: 4px;       
+}
+
+a:link,
+a:visited {
+  display: block;
+  background-color: black; 
+  color: white;        
+  font-weight: bold;
+  font-family: "Times New Roman", serif;
+  font-size: 17px;
+  text-decoration: none;  
+  padding: 10px 20px;      
+}
+
+a:hover,
+a:active {
+  background-color: gray;  
+}
